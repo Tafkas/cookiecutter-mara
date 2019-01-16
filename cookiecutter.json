@@ -10,5 +10,6 @@
     "_extensions": ["jinja2_time.TimeExtension"],
     "pipeline": "myfirstpipeline",
     "pipeline_slug": "mfp",
-    "database user": "root"
+    "database user": "root",
+    "default_db_alias": "dwh"
 }

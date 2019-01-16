@@ -12,7 +12,7 @@ import app.config
 
 patch(data_integration.config.data_dir)(lambda: app.config.data_dir())
 patch(data_integration.config.first_date)(lambda: app.config.first_date())
-patch(data_integration.config.default_db_alias)(lambda: 'dwh')
+patch(data_integration.config.default_db_alias)(lambda: '{{cookiecutter.default_db_alias}}')
 
 
 @patch(data_integration.config.root_pipeline)

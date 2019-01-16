@@ -12,8 +12,10 @@ import app.config
 def databases():
     return {
         # the project requires two databases: 'mara' for the app itself, and 'dwh' for the etl
-        'dwh': mara_db.dbs.PostgreSQLDB(user='stade', host='localhost', database='{{cookiecutter.project_slug.replace("-", "_")}}_dwh'),
-        'mara': mara_db.dbs.PostgreSQLDB(user='stade', host='localhost', database='{{cookiecutter.project_slug.replace("-", "_")}}_mara')
+        '{{cookiecutter.default_db_alias}}': mara_db.dbs.PostgreSQLDB(user='stade', host='localhost',
+                                                                      database='{{cookiecutter.project_slug.replace("-", "_")}}_{{cookiecutter.default_db_alias}}'),
+        'mara': mara_db.dbs.PostgreSQLDB(user='stade', host='localhost',
+                                         database='{{cookiecutter.project_slug.replace("-", "_")}}_mara')
     }
 
 
@@ -21,10 +23,6 @@ def databases():
 # On production, make sure the ETL does not slow down other services too much
 patch(data_integration.config.max_number_of_parallel_tasks)(lambda: 4)
 
-# The first day for which to download and process data (default 2017-01-01).
-# Locally, a few days of data is enough to test a pipeline.
-# On production, size of days that can be processed depends on machine size.
-# One year of data amounts to roughly 50GB database size
 patch(app.config.first_date)(lambda: datetime.date.today() - datetime.timedelta(days=5))
 
 # Whether it is possible to run the ETL from the web UI
