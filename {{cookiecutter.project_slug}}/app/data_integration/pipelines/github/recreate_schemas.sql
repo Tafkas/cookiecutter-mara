@@ -1,7 +1,0 @@
-DROP SCHEMA IF EXISTS gh_dim_next CASCADE;
-CREATE SCHEMA gh_dim_next;
-
-DROP SCHEMA IF EXISTS gh_tmp CASCADE;
-CREATE SCHEMA gh_tmp;
-
-
