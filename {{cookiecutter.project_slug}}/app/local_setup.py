@@ -12,8 +12,8 @@ import app.config
 def databases():
     return {
         # the project requires two databases: 'mara' for the app itself, and 'dwh' for the etl
-        'dwh': mara_db.dbs.PostgreSQLDB(user='stade', host='localhost', database='example_project_dwh'),
-        'mara': mara_db.dbs.PostgreSQLDB(user='stade', host='localhost', database='example_project_mara')
+        'dwh': mara_db.dbs.PostgreSQLDB(user='stade', host='localhost', database='{{cookiecutter.project_slug.replace("-", "_")}}_dwh'),
+        'mara': mara_db.dbs.PostgreSQLDB(user='stade', host='localhost', database='{{cookiecutter.project_slug.replace("-", "_")}}_mara')
     }
 
 

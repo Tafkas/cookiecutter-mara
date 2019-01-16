@@ -19,14 +19,14 @@ patch(data_integration.config.default_db_alias)(lambda: 'dwh')
 @functools.lru_cache(maxsize=None)
 def root_pipeline():
     import app.data_integration.pipelines.utils
-    import app.data_integration.pipelines.github
+    import app.data_integration.pipelines.{{cookiecutter.pipeline}}
 
     pipeline = Pipeline(
-        id='mara_example_project',
-        description='An example pipeline that integrates PyPI download stats with the Github activity of a project')
+        id='{{cookiecutter.project_slug}}',
+        description='{{cookiecutter.project_name}} Data Pipeline')
 
     pipeline.add(app.data_integration.pipelines.utils.pipeline)
-    pipeline.add(app.data_integration.pipelines.github.pipeline, upstreams=['utils'])
+    pipeline.add(app.data_integration.pipelines.{{cookiecutter.pipeline}}.pipeline, upstreams=['utils'])
     return pipeline
 
 
