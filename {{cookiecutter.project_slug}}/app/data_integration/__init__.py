@@ -22,7 +22,7 @@ def root_pipeline():
     import app.data_integration.pipelines.{{cookiecutter.pipeline}}
 
     pipeline = Pipeline(
-        id='{{cookiecutter.project_slug}}',
+        id='{{cookiecutter.project_slug.replace("-", "_")}}',
         description='{{cookiecutter.project_name}} Data Pipeline')
 
     pipeline.add(app.data_integration.pipelines.utils.pipeline)
