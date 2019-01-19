@@ -9,5 +9,5 @@ pipeline = pipelines.Pipeline(
     base_path=pathlib.Path(__file__).parent)
 
 
-pipeline.add(initialize_utils.utils_pipeline(with_cstore_fdw=True))
+pipeline.add(initialize_utils.utils_pipeline( {% if cookiecutter.use_cstore_extension == "y" -%}with_cstore_fdw=True{%- endif%}))
 pipeline.add(create_time_dimensions.pipeline, upstreams=['initialize_utils'])

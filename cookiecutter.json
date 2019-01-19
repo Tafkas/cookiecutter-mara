@@ -11,5 +11,6 @@
     "pipeline": "myfirstpipeline",
     "pipeline_slug": "mfp",
     "database user": "root",
-    "default_db_alias": "dwh"
+    "default_db_alias": "dwh",
+    "use_cstore_extension": "n"
 }
