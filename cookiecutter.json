@@ -10,7 +10,7 @@
     "_extensions": ["jinja2_time.TimeExtension"],
     "pipeline": "myfirstpipeline",
     "pipeline_slug": "mfp",
-    "database user": "root",
+    "database_user": "root",
     "default_db_alias": "dwh",
     "use_cstore_extension": "n"
 }

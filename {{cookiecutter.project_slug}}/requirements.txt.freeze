@@ -2,22 +2,23 @@ alembic==1.0.6
 certifi==2018.11.29
 chardet==3.0.4
 Click==7.0
--e git+https://github.com/mara/data-integration.git@bc76b514a12bd6c13686bfbaabd91ed285c3e9ce#egg=data_integration
--e git+https://github.com/mara/etl-tools.git@0dbf96601406dd477e2ec3c3759e62868823a8b4#egg=etl_tools
-Flask==1.0.2
+-e git+https://github.com/mara/data-integration.git@c1ad2ba7ef0aee0a4194820e039a479549007a29#egg=data_integration
+Flask==1.1.1
 graphviz==0.10.1
 gunicorn==19.9.0
 idna==2.8
 itsdangerous==1.1.0
-Jinja2==2.10
+Jinja2==2.10.1
 Mako==1.0.7
--e git+https://github.com/mara/mara-acl.git@9d0ef617e6c3baa2df2824935e63921fdbddfc60#egg=mara_acl
--e git+https://github.com/mara/mara-app.git@f6c2dd8ff19ccc7b5f7d828aedfcefffafb799ab#egg=mara_app
--e git+https://github.com/mara/mara-db.git@f28b5d69266eab02d74dae4c903bc8dc218acada#egg=mara_db
--e git+https://github.com/mara/mara-page.git@b1c32141080a322c9d8a7613ae1dc070479f762d#egg=mara_page
+-e git+https://github.com/mara/mara-acl.git@751066101c1cac484edd2984fd0eace283f6332d#egg=mara_acl
+-e git+https://github.com/mara/mara-app.git@81df3b8d56d3ef1dbcbf6b88f59d9a22aefc4a75#egg=mara_app
+-e git+https://github.com/mara/mara-db.git@9ce0a51f699fe6df164d20680a2e8230819b4175#egg=mara_db
+-e git+https://github.com/mara/mara-etl-tools.git@4749619993bd20e19d38f2a3981bec37a9038274#egg=mara_etl_tools
+-e git+https://github.com/mara/mara-page.git@c499a6c44aaa638c1515c3a857e5f68cad8b84c9#egg=mara_page
 MarkupSafe==1.1.0
 more-itertools==5.0.0
 multimethod==1.0
+pipdeptree==0.13.2
 psutil==5.4.8
 psycopg2-binary==2.7.6.1
 Pygments==2.3.1
@@ -29,4 +30,4 @@ six==1.12.0
 SQLAlchemy==1.2.16
 SQLAlchemy-Utils==0.33.11
 urllib3==1.24.1
-Werkzeug==0.14.1
+Werkzeug==0.15.5
